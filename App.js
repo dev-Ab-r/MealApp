@@ -3,8 +3,11 @@ import React,{useState} from 'react';
 import { StyleSheet, Text, View } from 'react-native';
 import * as Font from 'expo-font';
 import { AppLoading } from 'expo';
+//import AppLoading from 'expo-app-loading';
+
 import CategoriesScreen from './screens/CategoriesScreen';
 import { loadAsync } from 'expo-font';
+import MealsNavigator from './navigation/MealsNavigator';
 
 
 const fetchFonts = () =>{
@@ -21,22 +24,11 @@ export default function App() {
     <AppLoading
      startAsync = {fetchFonts}
      onFinish = {()=> setFontLoded(true)}
-    
     />
   }
 
   return (
-    <View style={styles.container}>
-      <StatusBar  backgroundColor='#61dafb' />
-      <View>
-      <Text>Open up App.js to start working on your app!</Text>
-      </View>
-      <View>
-      
-      </View>
-     
-      
-    </View>
+    <MealsNavigator/>
   );
 }
 

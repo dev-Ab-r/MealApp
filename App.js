@@ -1,9 +1,12 @@
 import { StatusBar } from 'expo-status-bar';
-import React,{useState} from 'react';
+//import React,{useState} from 'react';
+import React, {Component,useState} from 'react';
 import { StyleSheet, Text, View } from 'react-native';
 import * as Font from 'expo-font';
-import { AppLoading } from 'expo';
-//import AppLoading from 'expo-app-loading';
+//import { AppLoading } from 'expo';
+import AppLoading from 'expo-app-loading';
+import { createStackNavigator } from "react-navigation-stack"; 
+import { createAppContainer } from "react-navigation";
 
 import CategoriesScreen from './screens/CategoriesScreen';
 import { loadAsync } from 'expo-font';
@@ -28,6 +31,7 @@ export default function App() {
   }
 
   return (
+
     <MealsNavigator/>
   );
 }
